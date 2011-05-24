@@ -9,16 +9,13 @@ FILES_TO_BACKUP = %w( .vim .vimrc .gvimrc )
 task :install do
   backup_current_environment
   install_config_files
-  #create folder structure
-  #copy .vimrc and .gvimrc files
-  #install colorscheme
-  #install vundle
-  #execute vim +"BundleInstall"
+  install_vundle
+  install_plugins
 end
 
 task :uninstall do
   restore_backup_environment
-  #delete_installation_folder
+  delete_installation_folder
 end
 
 def backup_current_environment
@@ -29,6 +26,7 @@ def backup_current_environment
 end
 
 def restore_backup_environment
+  rm_r(join_path(HOME_FOLDER, '.vim'))
   FILES_TO_BACKUP.each do |file| 
     mv_if_exists(join_path(BACKUP_PATH, file), HOME_FOLDER)
   end
@@ -40,4 +38,15 @@ end
 
 def install_config_files
   cp(%w( .vimrc ), HOME_FOLDER)
+end
+
+def install_vundle
+  vundle_installation_folder = join_path(INSTALLATION_PATH, 'bundle/vundle')
+  vundle_git_repo = "http://github.com/gmarik/vundle.git"
+  system "git clone #{vundle_git_repo}  #{vundle_installation_folder}"
+end
+
+def install_plugins
+  cd INSTALLATION_PATH
+  system 'vim +"BundleInstall" +"quit"'
 end
