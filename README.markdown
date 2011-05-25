@@ -27,8 +27,8 @@ movement commands and so on.
 
 ### Move one or more lines up or down the file
 
-  CTRL + UP or CTRL + DOWN moves one line. Selects more than one line in 
-  visual mode to move them up as well (e.g. SHIFT+V)
+  `CTRL + UP` or `CTRL + DOWN` moves one line. Selects more than one line in 
+  visual mode to move them up as well (e.g. `SHIFT+V`)
 
 ### Move a whole method definition up and down
  
@@ -36,19 +36,19 @@ movement commands and so on.
 
 ### Quickly saving a file
 
-  Just press CTRL+S baby! Because :w is just awkward.
+  Just press `CTRL+S` baby! Because :w is just awkward.
   I might actually try to implement the autosave file when it loses focus like in RubyMine
   
-  Press CTRL+ALT+S to save all buffers (e.g. :wall)
+  Press `CTRL+ALT+S` to save all buffers (e.g. :wall)
 
 ### Code completion (based on word in the file)
 
-  CTRL + SPACE
+  `CTRL + SPACE`
 
 ### Jump to method or class in current file
 
   Not sure yet about the shortcut yet. The command is
-  :FufBufferTagAll and it's provided by FuzzyFinder plugin
+  `:FufBufferTagAll` and it's provided by FuzzyFinder plugin
 
 ### Surround current visual selection with double quotes
 
@@ -58,13 +58,39 @@ movement commands and so on.
   
   Not available yet.
 
-## Open files
+## Open file in current window
 
 ### Open a file by using FuzzyFinder
   
-  CTRL+SHIFT+N
+  `CTRL+SHIFT+N`
 
 ### Switch to currently open buffer
   
   Again thank you FuzzyFinder
   ALT+SHIFT+N
+
+### Open file in the same folder as current one
+
+  `,e` and type the name of the file and enter
+
+## Window splits
+
+### Split vertically
+
+`CTRL+W, v`
+
+### Split horizontally
+
+`CTRL+W, n`
+
+### Move between windows
+
+`CTRL+W, direction` where direction is one of h,j,k,l
+
+### Enlarge current window (ZoomWin plugin)
+
+`,,` and the same again to zoom out
+
+## Debugging
+
+Not implemented yet
