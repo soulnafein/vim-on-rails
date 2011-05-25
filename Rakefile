@@ -6,11 +6,17 @@ INSTALLATION_PATH = join_path(HOME_FOLDER, ".vim_on_rails")
 BACKUP_PATH = join_path(INSTALLATION_PATH, "backup")
 FILES_TO_BACKUP = %w( .vim .vimrc .gvimrc )
 
-task :install do
-  backup_current_environment
-  install_config_files
+task :install => [:backup, :install_configuration] do
   install_vundle
   install_plugins
+end
+
+task :backup do
+  backup_current_environment
+end
+
+task :install_configuration do
+  install_config_files
 end
 
 task :uninstall do

@@ -168,8 +168,8 @@ nmap <C-Down> ]e
 vmap <C-Up> [egv
 vmap <C-Down> ]egv
 map <C-N> :FufCoverageFile<CR>
-map <C-N> :FufBuffer<CR>
+map <A-N> :FufBuffer<CR>
 imap <C-SPACE> <C-p>
 imap <C-A-SPACE> <C-x><C-]>
 map <C-s> :w<CR>
-map <C-S> :wall<CR>
+map <C-A-s> :wall<CR>
