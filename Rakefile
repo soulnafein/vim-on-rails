@@ -47,13 +47,13 @@ def install_config_files
 end
 
 def install_vundle
-  vundle_installation_folder = join_path(HOME_FOLDER, '.vim')
+  vundle_installation_folder = join_path(HOME_FOLDER, '.vim/bundle/vundle')
   vundle_git_repo = "http://github.com/gmarik/vundle.git"
-  system "git clone #{vundle_git_repo}  #{vundle_installation_folder}"
+  sh "git clone #{vundle_git_repo}  #{vundle_installation_folder}"
   mkdir_p(join_path(HOME_FOLDER, '.vim/swaps'))
 end
 
 def install_plugins
   cd INSTALLATION_PATH
-  system 'vim +"BundleInstall" +"quit"'
+  sh 'vim +"BundleInstall" +"quit"'
 end

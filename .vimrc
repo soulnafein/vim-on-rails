@@ -13,7 +13,7 @@ Bundle 'gmarik/vundle'
 Bundle "L9"
 Bundle "FuzzyFinder"
 Bundle "mileszs/ack.vim"
-Bundle "vim-scripts/Color-Sampler-Pack"
+Bundle "altercation/vim-colors-solarized"
 Bundle "http://conque.googlecode.com/files/conque_1.1.tar.gz"
 Bundle "tpope/vim-fugitive"
 Bundle "tpope/vim-git"
@@ -130,6 +130,7 @@ set modeline
 set modelines=10
 
 " Default color scheme
+silent! color solarized
 
 " Directories for swp files
 set backupdir=~/.vim/swaps
@@ -143,7 +144,6 @@ if filereadable(expand("~/.vimrc.local"))
   source ~/.vimrc.local
 endif
 
-color jellybeans
 
 """""""""""""""""""""""""""""""""""""""""""
 " KEYMAPS
