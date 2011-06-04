@@ -131,6 +131,7 @@ set modelines=10
 
 " Default color scheme
 silent! color solarized
+set background=dark
 
 " Directories for swp files
 set backupdir=~/.vim/swaps
