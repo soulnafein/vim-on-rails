@@ -23,6 +23,7 @@ Bundle "pangloss/vim-javascript"
 Bundle "wycats/nerdtree"
 Bundle "ddollar/nerdcommenter"
 Bundle "tpope/vim-surround"
+Bundle "Townk/vim-autoclose"
 Bundle "vim-scripts/taglist.vim"
 Bundle "ervandew/supertab"
 Bundle "tpope/vim-cucumber"
@@ -131,6 +132,7 @@ set modelines=10
 
 " Default color scheme
 silent! color solarized
+set background=dark
 
 " Directories for swp files
 set backupdir=~/.vim/swaps
@@ -173,3 +175,8 @@ imap <C-SPACE> <C-p>
 imap <C-A-SPACE> <C-x><C-]>
 map <C-s> :w<CR>
 map <C-A-s> :wall<CR>
+
+"""""""""""""""""""""""""""""""""""""""""""
+" AUTOSAVE
+"""""""""""""""""""""""""""""""""""""""""""
+autocmd FocusLost * :wall
