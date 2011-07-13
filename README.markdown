@@ -9,9 +9,9 @@ writing Ruby on Rails code. For each scenario I'll list the way I've solved it.
 
 ## Installation
 
-`git clone https://soulnafein@github.com/soulnafein/vim-on-rails.git`
-`cd vim-on-rails`
-`rake install`
+	git clone https://github.com/soulnafein/vim-on-rails.git
+	cd vim-on-rails
+	rake install
 
 This will take care of your existing .vim folder and .vimrc .gvimrc files
 You can restore your previous VIM environment by typing:
