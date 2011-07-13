@@ -35,6 +35,8 @@ Bundle "tpope/vim-unimpaired"
 Bundle "tpope/vim-endwise"
 Bundle "kchmck/vim-coffee-script"
 Bundle "scrooloose/syntastic"
+Bundle "matchit.zip"
+Bundle "ecomba/vim-ruby-refactoring"
 
 """""""""""""""""""""""""""""""""""""
 " General configuration
