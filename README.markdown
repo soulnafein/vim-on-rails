@@ -9,6 +9,7 @@ writing Ruby on Rails code. For each scenario I'll list the way I've solved it.
 
 ## Installation
 
+  gem install exuberant_ctags ri_vim
 	git clone https://github.com/soulnafein/vim-on-rails.git
 	cd vim-on-rails
 	rake install
