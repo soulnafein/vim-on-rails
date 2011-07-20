@@ -37,6 +37,7 @@ Bundle "kchmck/vim-coffee-script"
 Bundle "scrooloose/syntastic"
 Bundle "matchit.zip"
 Bundle "ecomba/vim-ruby-refactoring"
+Bundle "danchoi/ri_vim"
 
 """""""""""""""""""""""""""""""""""""
 " General configuration
